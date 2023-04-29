@@ -1,18 +1,18 @@
 package com.pattern.decorator;
 
-public class Whip extends BeverageDecorator {
+public class Whip extends CondimentDecorator {
+
+    Beverage beverage;
 
     public Whip(Beverage beverage) {
-        super(beverage);
+        this.beverage = beverage;
     }
 
-    @Override
-    public Double cost() {
-        return super.cost() + 0.1d;
-    }
-
-    @Override
     public String getDescription() {
-        return super.getDescription() + " with Whip";
+        return beverage.getDescription() + ", Whip";
+    }
+
+    public Double cost() {
+        return .10 + beverage.cost();
     }
 }

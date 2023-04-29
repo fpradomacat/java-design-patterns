@@ -1,19 +1,19 @@
 package com.pattern.decorator;
 
-public class Soy extends BeverageDecorator {
+public class Soy extends CondimentDecorator {
+
+    Beverage beverage;
 
     public Soy(Beverage beverage) {
-        super(beverage);
+        this.beverage = beverage;
     }
 
-    @Override
-    public Double cost() {
-        return super.cost() + 0.15d;
-    }
-
-    @Override
     public String getDescription() {
-        return super.getDescription() + " with Soy";
+        return beverage.getDescription() + ", Soy";
+    }
+
+    public Double cost() {
+        return .15 + beverage.cost();
     }
 
 }

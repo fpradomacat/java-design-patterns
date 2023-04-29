@@ -2,14 +2,13 @@ package com.pattern.decorator;
 
 public class HouseBlend extends Beverage {
 
-    @Override
-    public Double cost() {
-        return Double.valueOf(0.89d);
+    public HouseBlend() {
+        this.description = "House Blend";
     }
 
     @Override
-    public String getDescription() {
-        return "HouseBlend";
+    public Double cost() {
+        return Double.valueOf(0.89d);
     }
 
 }
